@@ -11,12 +11,12 @@
     ],
     "routes": [
       {
-        "src": "/tasks",
+        "src": "/tasks(.*)",
         "dest": "/dist/index.js"
       },
       {
         "src": "/(.*)",
-        "dest": "/dist/$1"
+        "dest": "/dist/index.js"
       }
     ]
   }
