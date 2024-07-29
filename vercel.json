@@ -10,8 +10,13 @@
     ],
     "routes": [
       {
+        "src": "/tasks",
+        "dest": "/dist/tasks.js"
+      },
+      {
         "src": "/(.*)",
         "dest": "/dist/$1"
       }
     ]
   }
+  
