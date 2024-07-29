@@ -11,7 +11,7 @@
     ],
     "routes": [
       {
-        "src": "/tasks(.*)",
+        "src": "/tasks/(.*)",
         "dest": "/dist/index.js"
       },
       {
