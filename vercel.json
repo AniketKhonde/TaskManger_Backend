@@ -1,23 +1,22 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "src/index.ts",
-        "use": "@vercel/node",
-        "config": {
-          "outputDirectory": "dist"
-        }
+  "version": 2,
+  "builds": [
+    {
+      "src": "src/index.ts",
+      "use": "@vercel/node",
+      "config": {
+        "includeFiles": [
+          "src/**/*",
+          "tsconfig.json",
+          "node_modules/**/*"
+        ]
       }
-    ],
-    "routes": [
-      {
-        "src": "/tasks/(.*)",
-        "dest": "/dist/index.js"
-      },
-      {
-        "src": "/(.*)",
-        "dest": "/dist/index.js"
-      }
-    ]
-  }
-  
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "src/index.ts"
+    }
+  ]
+}
